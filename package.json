@@ -1,0 +1,24 @@
+{
+  "name": "@kazamitte/design-token",
+  "version": "0.1.0",
+  "description": "Tailwind CSS v4 design token — color, typography, and style themes.",
+  "type": "module",
+  "private": true,
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/generate-theme.d.mts",
+      "import": "./dist/generate-theme.mjs"
+    },
+    "./index.css": "./tailwind/index.css",
+    "./base/initialize.css": "./tailwind/base/initialize.css",
+    "./base/color/*.css": "./tailwind/base/color/*.css",
+    "./base/typography/*.css": "./tailwind/base/typography/*.css",
+    "./base/style/*.css": "./tailwind/base/style/*.css",
+    "./theme/color/*.css": "./tailwind/theme/color/*.css",
+    "./theme/style/*.css": "./tailwind/theme/style/*.css",
+    "./package.json": "./package.json"
+  }
+}
