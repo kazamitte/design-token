@@ -1,0 +1,138 @@
+{
+  "red": {
+    "secondary": ["indigo", "purple", "violet", "blue"],
+    "base": {
+      "harmonized": ["taupe", "stone"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["blue"]
+  },
+  "orange": {
+    "secondary": ["indigo", "purple", "violet", "blue"],
+    "base": {
+      "harmonized": ["taupe", "stone"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["blue"]
+  },
+  "amber": {
+    "secondary": ["indigo", "purple", "violet", "blue"],
+    "base": {
+      "harmonized": ["stone", "taupe", "olive"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["blue"]
+  },
+  "yellow": {
+    "secondary": ["indigo", "purple", "violet", "blue"],
+    "base": {
+      "harmonized": ["olive", "stone"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["blue"]
+  },
+  "lime": {
+    "secondary": ["indigo", "violet", "purple", "blue"],
+    "base": {
+      "harmonized": ["olive", "stone"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["indigo", "blue"]
+  },
+  "green": {
+    "secondary": ["indigo", "violet", "blue", "purple"],
+    "base": {
+      "harmonized": ["olive", "mist"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["indigo"]
+  },
+  "emerald": {
+    "secondary": ["indigo", "violet", "blue", "purple"],
+    "base": {
+      "harmonized": ["mist", "olive"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["blue", "indigo"]
+  },
+  "teal": {
+    "secondary": ["lime", "yellow", "amber", "orange"],
+    "base": {
+      "harmonized": ["mist", "slate"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["blue"]
+  },
+  "cyan": {
+    "secondary": ["lime", "yellow", "amber", "orange"],
+    "base": {
+      "harmonized": ["mist", "slate"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["indigo"]
+  },
+  "sky": {
+    "secondary": ["lime", "yellow", "amber", "orange"],
+    "base": {
+      "harmonized": ["slate", "mist"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["indigo"]
+  },
+  "blue": {
+    "secondary": ["lime", "yellow", "amber", "orange"],
+    "base": {
+      "harmonized": ["slate", "mist"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["cyan"]
+  },
+  "indigo": {
+    "secondary": ["lime", "yellow", "amber", "orange"],
+    "base": {
+      "harmonized": ["slate", "mauve"],
+      "achromatic": ["zinc", "neutral", "gray"]
+    },
+    "link": ["cyan"]
+  },
+  "violet": {
+    "secondary": ["lime", "yellow", "amber", "orange"],
+    "base": {
+      "harmonized": ["mauve"],
+      "achromatic": ["zinc", "neutral", "gray"]
+    },
+    "link": ["blue"]
+  },
+  "purple": {
+    "secondary": ["yellow", "lime", "amber", "orange"],
+    "base": {
+      "harmonized": ["mauve"],
+      "achromatic": ["zinc", "neutral", "gray"]
+    },
+    "link": ["blue"]
+  },
+  "fuchsia": {
+    "secondary": ["yellow", "amber", "lime", "orange"],
+    "base": {
+      "harmonized": ["mauve", "taupe"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["teal", "cyan", "blue"]
+  },
+  "pink": {
+    "secondary": ["yellow", "amber", "lime", "orange"],
+    "base": {
+      "harmonized": ["mauve", "taupe"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["teal", "cyan", "blue"]
+  },
+  "rose": {
+    "secondary": ["indigo", "purple", "violet", "blue"],
+    "base": {
+      "harmonized": ["taupe", "mauve"],
+      "achromatic": ["neutral", "zinc", "gray"]
+    },
+    "link": ["blue", "teal"]
+  }
+}

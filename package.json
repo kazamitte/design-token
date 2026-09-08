@@ -2,6 +2,7 @@
   "name": "@kazamitte/design-token",
   "version": "0.1.0",
   "description": "Tailwind CSS v4 design token — color, typography, and style themes.",
+  "license": "MIT",
   "type": "module",
   "private": true,
   "sideEffects": [
