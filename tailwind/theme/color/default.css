@@ -1,0 +1,60 @@
+/*
+ * Theme Color
+ * ├─ Base       — Mist
+ * ├─ Primary    — Teal
+ * ├─ Secondary  — Violet
+ * └─ Link       — Blue
+ */
+
+:root {
+  --r-base-bg: var(--c-mist-bg);
+  --r-base-bg-subtle: var(--c-mist-bg-subtle);
+  --r-base-bg-muted: var(--c-mist-bg-muted);
+  --r-base-bg-selected: var(--c-mist-bg-selected);
+  --r-base-bg-solid: var(--c-mist-bg-solid);
+  --r-base-border-subtle: var(--c-mist-border-subtle);
+  --r-base-border-muted: var(--c-mist-border-muted);
+  --r-base-border-selected: var(--c-mist-border-selected);
+  --r-base-border-solid: var(--c-mist-border-solid);
+  --r-base-fg-strong: var(--c-mist-fg-strong);
+  --r-base-fg: var(--c-mist-fg);
+  --r-base-fg-muted: var(--c-mist-fg-muted);
+  --r-base-fg-subtle: var(--c-mist-fg-subtle);
+  --r-base-fg-contrast: var(--c-mist-fg-contrast);
+  --r-base-focus-ring: var(--c-mist-focus-ring);
+
+  --r-primary-bg: var(--c-teal-bg);
+  --r-primary-bg-subtle: var(--c-teal-bg-subtle);
+  --r-primary-bg-muted: var(--c-teal-bg-muted);
+  --r-primary-bg-selected: var(--c-teal-bg-selected);
+  --r-primary-bg-solid: var(--c-teal-bg-solid);
+  --r-primary-border-subtle: var(--c-teal-border-subtle);
+  --r-primary-border-muted: var(--c-teal-border-muted);
+  --r-primary-border-selected: var(--c-teal-border-selected);
+  --r-primary-border-solid: var(--c-teal-border-solid);
+  --r-primary-fg-strong: var(--c-teal-fg-strong);
+  --r-primary-fg: var(--c-teal-fg);
+  --r-primary-fg-muted: var(--c-teal-fg-muted);
+  --r-primary-fg-subtle: var(--c-teal-fg-subtle);
+  --r-primary-fg-contrast: var(--c-teal-fg-contrast);
+  --r-primary-focus-ring: var(--c-teal-focus-ring);
+
+  --r-secondary-bg: var(--c-violet-bg);
+  --r-secondary-bg-subtle: var(--c-violet-bg-subtle);
+  --r-secondary-bg-muted: var(--c-violet-bg-muted);
+  --r-secondary-bg-selected: var(--c-violet-bg-selected);
+  --r-secondary-bg-solid: var(--c-violet-bg-solid);
+  --r-secondary-border-subtle: var(--c-violet-border-subtle);
+  --r-secondary-border-muted: var(--c-violet-border-muted);
+  --r-secondary-border-selected: var(--c-violet-border-selected);
+  --r-secondary-border-solid: var(--c-violet-border-solid);
+  --r-secondary-fg-strong: var(--c-violet-fg-strong);
+  --r-secondary-fg: var(--c-violet-fg);
+  --r-secondary-fg-muted: var(--c-violet-fg-muted);
+  --r-secondary-fg-subtle: var(--c-violet-fg-subtle);
+  --r-secondary-fg-contrast: var(--c-violet-fg-contrast);
+  --r-secondary-focus-ring: var(--c-violet-focus-ring);
+
+  --r-link-fg: var(--c-blue-fg);
+  --r-link-fg-strong: var(--c-blue-fg-strong);
+}
