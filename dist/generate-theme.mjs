@@ -1,5 +1,5 @@
 // indent width: 2 half-width spaces
-const INDENT = ' '.repeat(2);
+const INDENT = " ".repeat(2);
 
 /**
  * Role token names.
@@ -9,35 +9,35 @@ const INDENT = ' '.repeat(2);
  * consumes, so generated themes are drop-in replacements for it.
  */
 const ROLE_TOKENS = [
-  'bg',
-  'bg-subtle',
-  'bg-muted',
-  'bg-selected',
-  'bg-solid',
-  'border-subtle',
-  'border-muted',
-  'border-selected',
-  'border-solid',
-  'fg-strong',
-  'fg',
-  'fg-muted',
-  'fg-subtle',
-  'fg-contrast',
-  'focus-ring',
+  "bg",
+  "bg-subtle",
+  "bg-muted",
+  "bg-selected",
+  "bg-solid",
+  "border-subtle",
+  "border-muted",
+  "border-selected",
+  "border-solid",
+  "fg-strong",
+  "fg",
+  "fg-muted",
+  "fg-subtle",
+  "fg-contrast",
+  "focus-ring",
 ];
 
 const roleBlock = (role, color) => {
   const lines = ROLE_TOKENS.map(
     (t) => `${INDENT}--r-${role}-${t}: var(--c-${color}-${t});`,
   );
-  return lines.join('\n');
+  return lines.join("\n");
 };
 
 const linkBlock = (color) =>
   [
-    `${INDENT}--r-link-fg: var(--c-${color}-fg);`,
-    `${INDENT}--r-link-fg-strong: var(--c-${color}-fg-strong);`,
-  ].join('\n');
+    `${INDENT}--r-link-fg: var(--c-${color}-fg-muted);`,
+    `${INDENT}--r-link-fg-strong: var(--c-${color}-fg);`,
+  ].join("\n");
 
 /** Generates the contents of a color theme stylesheet. */
 export const generateColorTheme = (theme) => {
@@ -45,13 +45,13 @@ export const generateColorTheme = (theme) => {
 
   return `:root {
 ${INDENT}/* base - ${base} */
-${roleBlock('base', base)}
+${roleBlock("base", base)}
 
 ${INDENT}/* primary - ${primary} */
-${roleBlock('primary', primary)}
+${roleBlock("primary", primary)}
 
 ${INDENT}/* secondary - ${secondary} */
-${roleBlock('secondary', secondary)}
+${roleBlock("secondary", secondary)}
 
 ${INDENT}/* link - ${link} */
 ${linkBlock(link)}

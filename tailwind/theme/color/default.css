@@ -55,6 +55,6 @@
   --r-secondary-fg-contrast: var(--c-violet-fg-contrast);
   --r-secondary-focus-ring: var(--c-violet-focus-ring);
 
-  --r-link-fg: var(--c-blue-fg);
-  --r-link-fg-strong: var(--c-blue-fg-strong);
+  --r-link-fg: var(--c-blue-fg-muted);
+  --r-link-fg-strong: var(--c-blue-fg);
 }
