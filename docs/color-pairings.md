@@ -1,104 +1,218 @@
 # 配色の組み合わせ
 
-各primaryに対して推奨する組み合わせの一覧である。
+primaryを決めたあとに、secondary・base・linkをどこから選ぶかの一覧である。出発点として使い、最終判断はデザインに委ねる。
 
-これらはあくまで出発点であり、厳格なルールではない。根拠を持って色を選ぶための参考資料として用意した。
+## 推奨の組み合わせ表
 
-表は単一の計算式の出力ではない。secondaryは数値の順位をそのまま採り、harmonizedは1番目が数値どおりで2番目以降にわずかに判断が入る。achromaticは3色固定で順序だけが変わり、linkは判断で選んでいる。以下ではその内訳を示す。
+SecondaryとBase (harmonized)は推奨順に並べている。Base (achromatic)とLinkはどの候補を選んでもよく、既定値は列の1番目である。
 
-## 推奨の組み合わせ
+| Primary | Secondary | Base (harmonized) | Base (achromatic) | Link |
+| --------- | ------------------------------- | ------------------- | ------------------- | ---------------------------- |
+| `red` | violet, purple, indigo, fuchsia | taupe, stone | neutral, zinc, gray | indigo, violet, purple, blue |
+| `orange` | violet, purple, indigo, blue | taupe, stone | neutral, zinc, gray | indigo, violet, purple, blue |
+| `amber` | violet, purple, indigo, blue | stone, taupe, olive | neutral, zinc, gray | indigo, violet, purple, blue |
+| `yellow` | violet, purple, indigo, blue | olive, stone | neutral, zinc, gray | indigo, violet, purple, blue |
+| `lime` | indigo, violet, purple, blue | olive, stone | neutral, gray, zinc | indigo, violet, purple, blue |
+| `green` | indigo, blue, violet, purple | olive, mist | neutral, gray, zinc | indigo, violet, purple, blue |
+| `emerald` | indigo, blue, violet, purple | mist, olive | neutral, gray, zinc | indigo, violet, purple, blue |
+| `teal` | lime, orange, amber, yellow | mist, slate | neutral, gray, zinc | indigo, violet, purple, blue |
+| `cyan` | lime, yellow, amber, orange | mist, slate | neutral, gray, zinc | indigo, violet, purple, blue |
+| `sky` | lime, yellow, amber, orange | slate, mist | neutral, gray, zinc | indigo, violet, purple, blue |
+| `blue` | lime, yellow, amber, orange | slate, mist | neutral, gray, zinc | indigo, violet, purple, blue |
+| `indigo` | lime, yellow, amber, orange | slate, mauve | neutral, zinc, gray | indigo, violet, purple, blue |
+| `violet` | yellow, lime, amber, orange | mauve, slate | neutral, zinc, gray | indigo, violet, purple, blue |
+| `purple` | yellow, amber, lime, orange | mauve, slate | neutral, zinc, gray | indigo, violet, purple, blue |
+| `fuchsia` | amber, orange, yellow, red | mauve, slate | neutral, zinc, gray | indigo, violet, purple, blue |
+| `pink` | blue, orange, amber, yellow | mauve, taupe | neutral, zinc, gray | indigo, violet, purple, blue |
+| `rose` | violet, purple, indigo, blue | taupe, stone | neutral, zinc, gray | indigo, violet, purple, blue |
 
-| Primary   | Secondary                    | Base (harmonized)   | Base (achromatic)   | Link             |
-| --------- | ---------------------------- | ------------------- | ------------------- | ---------------- |
-| `red`     | indigo, purple, violet, blue | taupe, stone        | neutral, zinc, gray | blue             |
-| `orange`  | indigo, purple, violet, blue | taupe, stone        | neutral, zinc, gray | blue             |
-| `amber`   | indigo, purple, violet, blue | stone, taupe, olive | neutral, zinc, gray | blue             |
-| `yellow`  | indigo, purple, violet, blue | olive, stone        | neutral, zinc, gray | blue             |
-| `lime`    | indigo, violet, purple, blue | olive, stone        | neutral, zinc, gray | indigo, blue     |
-| `green`   | indigo, violet, blue, purple | olive, mist         | neutral, zinc, gray | indigo           |
-| `emerald` | indigo, violet, blue, purple | mist, olive         | neutral, zinc, gray | blue, indigo     |
-| `teal`    | lime, yellow, amber, orange  | mist, slate         | neutral, zinc, gray | blue             |
-| `cyan`    | lime, yellow, amber, orange  | mist, slate         | neutral, zinc, gray | indigo           |
-| `sky`     | lime, yellow, amber, orange  | slate, mist         | neutral, zinc, gray | indigo           |
-| `blue`    | lime, yellow, amber, orange  | slate, mist         | neutral, zinc, gray | cyan             |
-| `indigo`  | lime, yellow, amber, orange  | slate, mauve        | zinc, neutral, gray | cyan             |
-| `violet`  | lime, yellow, amber, orange  | mauve               | zinc, neutral, gray | blue             |
-| `purple`  | yellow, lime, amber, orange  | mauve               | zinc, neutral, gray | blue             |
-| `fuchsia` | yellow, amber, lime, orange  | mauve, taupe        | neutral, zinc, gray | teal, cyan, blue |
-| `pink`    | yellow, amber, lime, orange  | mauve, taupe        | neutral, zinc, gray | teal, cyan, blue |
-| `rose`    | indigo, purple, violet, blue | taupe, mauve        | neutral, zinc, gray | blue, teal       |
+## Secondary の選び方
 
-各列の候補は推奨順に並べている。件数は列ごとに一定ではなく、これも選定の結果である。baseはharmonizedとachromaticのどちらかを選ぶ。
+Secondaryは、P型・D型の色覚シミュレーション後でもprimaryとできるだけ離れて見える色を選ぶ。
 
-## 選定の根拠
+- P型（1型色覚/protan）: 赤系の光に対する感度が低い、または欠けるタイプ
+- D型（2型色覚/deutan）: 緑系の光に対する感度が低い、または欠けるタイプ
 
-### Secondary — 知覚的な分離
+primary以外の16色すべてについて、P型・D型に変換した後の色差を、ΔE2000（CIEDE2000）指標を用いて、2色の知覚的な違いを数値化する。0に近いほど似ており、値が大きいほど違って見える。
 
-primaryから十分に離れた色を選定した。secondaryをprimaryの濃淡ではなく、独立した信号として認識しやすくするためである。
+なお、T型（3型色覚/tritan）は、青系の色に対応するが、まれな色覚特性であるため今回の評価からは除外している。
 
-「十分に離れている」ことの確認には、色差の指標 ΔE2000（CIEDE2000）を用いた。2つの色が人の目にどれだけ違って見えるかを数値化した指標で、0が同一色、値が大きいほど知覚上の差も大きい。
+評価には次の3つの表示条件を使う。
 
-さらに、色覚の型による見え方の違いも考慮した。人の色覚は、目にある3種類の錐体（L・M・S）の働き方によっていくつかの型に分かれる。P型（1型）はL錐体、D型（2型）はM錐体の欠損または変異によるもので、いずれも赤と緑の系統を判別しにくい傾向がある。
+- `bg-solid`（step 700）
+- ライトモードの`fg-subtle`
+- ダークモードの`fg-subtle`
 
-計算は`bg-solid`が参照するstep 700を対象とした。npmパッケージの[@bjornlu/colorblind](https://www.npmjs.com/package/@bjornlu/colorblind)でP型・D型をシミュレートし、変換後の色について、表に挙げた組み合わせの ΔE2000を求めている。その結果、最小値は26.5、17件すべてが25以上となった。この列は数値の順位をそのまま採っており、17行すべてで4色が計算上の上位4件と一致する。
+P型・D型それぞれで測るため、合計6条件になる。そのうち最も小さいΔE2000値を、そのprimaryとsecondaryの組み合わせのスコアとする。
 
-26.5という下限自体に根拠があるわけではない。妥当性は既知の混同ペアとの比較で判断した。古くから見分けにくいとされる組み合わせを同じ方法で計算すると、`red`×`green`が11.3、`orange`×`green`が11.6である。今回の下限はこれらを大きく上回る。
+つまり、ある条件だけで大きく離れて見える色ではなく、P型・D型やライト・ダークをまたいでも安定して見分けやすい色を優先している。
 
-数値だけでなく、カラーユニバーサルデザイン推奨配色セットの考え方も照合した。ガイドブックでは、P型・D型で見分けにくい色の組み合わせが媒体別に整理されており、例としてピンクと緑が挙げられている。
+そのスコアが大きい順に上位4色をSecondary候補とした。
 
-ただしCUDのトークンは調整済みの固定値で、名前もこのパレットの色名と対応しない。実測でもっとも近いのは次の色である。
+### P型・D型での見え方
 
-| CUD トークン   | 近いパレット色       |
-| -------------- | -------------------- |
-| pink #ff8082   | `red-400`（ΔE 5.9）  |
-| green #03af7a  | `emerald-500`（3.9） |
-| red #ff4b00    | `orange-600`（2.0）  |
-| orange #f6aa00 | `yellow-500`（3.7）  |
-| purple #990099 | `fuchsia-800`（2.9） |
+赤と緑を見分けにくい色覚（P型・D型）では、このパレットの多くの色が「黄っぽく見える色」と「青っぽく見える色」に大きく分かれる。
 
-つまり「ピンクと緑」が指すのは`pink`×`green`ではなく、`red`・`rose`×`emerald`にあたる。該当する組み合わせは`rose`×`emerald`が15.3、`red`×`green`が11.3、`rose`×`green`が7.9と、いずれも下限を下回るため数値の段階で落ちる。名前だけを突き合わせた手動の除外は行っていない。参考までに`pink`×`green`は27.9で、分離は十分である。
+- 黄グループ: `rose`, `red`, `orange`, `amber`, `yellow`, `lime`, `green`, `emerald`
+- 青グループ: `cyan`, `sky`, `blue`, `indigo`, `violet`, `purple`, `fuchsia`
+- 境界にある色: `teal`, `pink`
 
-T型（3型）は評価対象外とした。S錐体の欠損または変異によるもので、青と黄の系統を見分けにくい型だが、P型・D型と比べて割合が極めて小さいためである。また、評価に含めると`green`×`cyan`が ΔE 0.4となり、この型を基準に据えると選べる組み合わせが過度に狭まる。
+`teal`と`pink`はP型とD型で見え方の方向が異なるため、どちらか一方のグループには固定していない。
 
-### Base（harmonized）— 調和色
+同じ側にある色どうしはP型・D型への変換後に色相差が小さくなり、主に明るさや鮮やかさの違いとして知覚されやすい。たとえば`red`と`green`は、通常色覚では大きく異なるが、P型・D型ではどちらも黄寄りに見える。
 
-primaryと色相を共有するニュートラルを選定した。画面全体にまとまりを持たせつつ、色みは中立に見える範囲へ抑えている。
+### 数値での評価
 
-候補は、9つのニュートラルのうち調和色に割り当てた6色である。step 500のHはtaupeが43°、stoneが58°、oliveが107°、mistが213°、slateが257°、mauveが322°で、色相環上に散らしてある。どのprimaryにも近い候補が1つはある。
+P型・D型の見え方の変換にはMachado et al. (2009) の行列を使う。severityは1.0で、Chromium DevToolsの色覚エミュレーションで使われている行列と同じものである。
 
-順位はstep 500でのHの距離だけで決めている。17のprimaryすべてで、1番目は距離が最小の候補と一致する。
+変換手順は次のとおり。
 
-2番目まで見ると、外れるのはfuchsiaとroseの2件である。fuchsiaは距離2位のslate（65°）を、roseは2位のstone（42°）を飛ばして、それぞれtaupeとmauveを採っている。どちらもマゼンタ寄りと暖色寄りを1つずつ持たせた形になる。
+```text
+OKLCH
+→ sRGB 8bit
+→ 線形RGB
+→ Machado 2009 行列
+→ CIELAB
+→ ΔE2000
+```
 
-Cは重みに使っていない。Cで重み付けすると、彩度の高いslate（0.046）やmauve（0.034）が色相の近さを押しのけ、たとえばcyanの1番目がmist（距離2°）ではなくslate（42°）になる。アンダートーンを共有させたいのだから、見るべきはHの距離だけである。
+2色の違いはΔE2000で測る。0に近いほど似ており、値が大きいほど離れている。
 
-### Base（achromatic）— 無彩色
+この評価では、十分な余裕を持たせるため20以上をひとつの目安としている。これはP型・D型における一般的な知覚閾値を意味するものではなく、この配色評価のための基準である。
 
-primaryを中立な面の上で単独で際立たせたい場合、あるいはUI内にすでに多くの色が存在する場合に用いる。
+評価には、実際にsemantic tokenが参照する次の条件を使う。
 
-9つのニュートラルは、あらかじめ役割で二分してある。どのprimaryに対しても中立な地として使う3色（neutral、zinc、gray）と、primaryのアンダートーンを共有させる6色（taupe、stone、olive、mist、slate、mauve）である。この列は前者を全primaryで共通に使う。3色の顔ぶれはどの行でも同じで、順序だけがindigo・violet・purpleで変わる。この3つはzincの色相（285.9°）から20°以内にあり、zincがもっとも馴染むためである。それ以外はneutralが先頭で、grayは常に最後に置く。
+- `bg-solid`: step 700
+- ライトモードの`fg-subtle`: 色ごとにstep 500または600
+- ダークモードの`fg-subtle`: 色ごとにstep 500または600
 
-この分け方はCの閾値ではない。step 500のCは小さい順に、neutralが0、stoneが0.013、zincが0.016、taupeとmistが0.021、grayが0.027、oliveが0.031、mauveが0.034、slateが0.046で、両者は数直線上で入り混じっている。stoneはzincやgrayより無彩色に近いが調和色側にあり、grayはtaupeやmistより色みが強いが無彩色側にある。
+P型・D型それぞれについて3つの表示条件を測り、6条件のうち最も小さいΔE2000をその組み合わせの値とする。
 
-分けているのは色みの量ではなく、色みの向きに役割を与えるかどうかである。stoneの暖色みやslateの青みは、対応するprimaryと組ませたときに地の色として働かせたいので調和色に回している。neutral・zinc・grayは、どのprimaryとも組ませずに灰色として使う。
+代表的な結果は次のとおり。
 
-### Link — 本文への馴染み
+- `teal`と`pink`を除く15色では、表の上位候補が39以上
+- `teal`では23〜24程度
+- `pink`では最大でも16程度
+- `red` × `green`: 6
+- `orange` × `green`: 7
+- `rose` × `green`: 3
 
-primaryとbaseの双方に馴染みやすい色を選定した。この列は数値で順位付けしておらず、primaryとの見分けやすさとbaseとの馴染みの両方を見て判断で決めている。表ではいずれも別の色を挙げているが、primaryと同色でも構わない。リンクを本文から浮かせたくない場合は、baseに近い色を採ることもできる。
+`pink`は、この評価で採用した20の目安を満たすSecondary候補がない。PrimaryとSecondaryを色だけで明確に区別する必要がある用途では注意が必要である。
 
-リンクの識別は、下線など色以外の手がかりによって担保する前提である。そのためLink列では、色覚多様性のもとでのprimaryとの判別可能性を保証していない。
+## Base の選び方
 
-WCAG 1.4.1も、色だけで情報を伝えてはならないと定めている。リンク色そのものに意味を背負わせるのではなく、色以外の視覚的手がかりと併用する設計を前提とする。
+Baseは、primaryに色みを寄せるharmonizedと、色みを抑えるachromaticの2系統から選ぶ。
 
-## 補足事項
+### harmonized — primaryに寄せた灰色
 
-`red`、`rose`、`orange`をprimaryにすると、ステータスカラーの`--r-error-*`（red）や`--r-warning-*`（amber）と競合しやすい。
+primaryと色相の近い灰色を選ぶ。画面全体に統一感を持たせながら、地の色としては灰色に近い見た目を保つ。
 
-たとえば「エラーを示す赤」と「ブランドカラーとしての赤」を同一画面で使用した場合、トークン上では別の役割を割り当てていても、ユーザーには同じ意味を持つ色として認識される可能性がある。
+候補は次の6色である。
 
-これを避けるには、同系色のステータスカラーとブランドカラーを隣接させない設計が必要となる。ステータスカラーは`tailwind/base/color/status.css`で固定しており、色を差し替える手段は用意していない。どうしても分けたい場合は、変数を上書きするか、色以外の手がかりで差をつけることになる。警告表現については、危険標識で広く使われる黄色と黒の組み合わせを採用するのも有効な選択肢である。
+- `taupe`
+- `stone`
+- `olive`
+- `mist`
+- `slate`
+- `mauve`
+
+順位にはstep 500のOKLCH hueを使い、primaryとの色相角の差が小さい順に並べる。
+
+候補には常に上位2色を載せる。3番目の色もprimaryとの色相差が40°以内であれば候補に加える。
+
+### achromatic — 色みを抑えた灰色
+
+primaryを灰色の上で目立たせたい場合や、画面内ですでに多くの色を使っている場合に使う。
+
+候補は次の3色で固定する。
+
+- `neutral`
+- `zinc`
+- `gray`
+
+既定値は色みを持たない`neutral`である。
+
+残りの`zinc`と`gray`は、step 500のOKLCH hueがprimaryから近い順に並べる。順位は選択時の参考であり、どちらを使ってもよい。
+
+## Link の選び方
+
+Linkはprimaryとは独立して選ぶ。
+
+`link-fg`と`link-fg-strong`の2トークンを使い、それぞれ選んだ色の`fg-muted`と`fg`を参照する。
+
+表に載せた4色で、参照するstepは次のとおり。
+
+| Mode | `link-fg` | `link-fg-strong` |
+| ----- | --------- | ---------------- |
+| Light | 600 | 700 |
+| Dark | 400 | 300 |
+
+### Link の順位
+
+各色について、P型・D型変換後のリンク色と本文色との差を測る。
+
+評価対象は次の4条件である。
+
+- Lightの`link-fg`
+- Lightの`link-fg-strong`
+- Darkの`link-fg`
+- Darkの`link-fg-strong`
+
+さらにP型・D型の両方を評価し、その中で最も小さいΔE2000をその色の値とする。
+
+青グループの結果は次のとおり。
+
+- `indigo`: 23
+- `violet`: 22
+- `purple`: 20
+- `blue`: 20
+- `sky`: 17
+- `cyan`: 12
+- `teal`: 5
+
+このうち上位4色を候補として表に載せる。
+
+- `indigo`, `violet`, `purple`, `blue`
+
+既定値は`indigo`である。
+
+どの候補でも、最小値はダークモードのhover時に使うstep 300で発生する。
+
+黄グループでは`lime`、`yellow`、`amber`もダークモードで本文との色差を取りやすい。ただし、一般的なリンク色としての慣習を優先し、標準候補には含めていない。ダークモード主体のUIでは選択肢になり得る。
+
+一方、`red`、`rose`、`teal`、`pink`はP型・D型変換後に本文との差が小さくなりやすいため、リンク色としては避ける。特に`teal`はダークモードで無彩色に近づき、本文との差が小さくなる。
+
+### 色以外でもリンクを示す
+
+リンクは下線など、色以外の視覚的な目印を付ける前提とする。
+
+WCAG 2.2 Success Criterion 1.4.1 Use of Colorに従い、色だけでリンクであることを伝えない。
+
+## ステータスカラーとの競合
+
+ステータスカラーは慣例に沿って次の色を使う。
+
+- Error: `red`
+- Warning: `amber`
+- Success: `green`
+- Info: `blue`
+
+PrimaryやSecondaryがこれらと同色または近い色になる場合、ブランド表現と状態表現を色だけでは区別しにくくなる。
+
+特に`red`、`amber`、`green`、`blue`はステータスカラーと直接競合する。`rose`や`orange`などの近似色も、用途によっては同じ意味の色に見えることがある。
+
+### 回避策
+
+1. ステータス色とブランド色を近接して配置しない。
+2. アイコン、形状、ラベルなど色以外の視覚要素を併用する。
+3. 必要に応じてステータスカラーの変数を個別に上書きする。
+4. Warningでは、黄と黒の高コントラストな意匠を使う方法もある。
+
+色だけで状態を伝えず、意味の違いを他の視覚表現でも示すことを基本とする。
 
 ## 参考文献
 
-- カラーユニバーサルデザイン機構（CUDO）『カラーユニバーサルデザイン推奨配色セット ガイドブック』ver.4、2018年。PDFは[配布ページ](https://jfly.uni-koeln.de/colorset/)から入手できる。
-- [@bjornlu/colorblind](https://www.npmjs.com/package/@bjornlu/colorblind) — P型・D型のシミュレーションに使用した。
+- カラーユニバーサルデザイン機構（CUDO）『カラーユニバーサルデザイン推奨配色セット ガイドブック』ver.4、2018年。[配布ページ](https://jfly.uni-koeln.de/colorset/)
+- Machado, G. M., Oliveira, M. M., Fernandes, L. A. F. (2009). A Physiologically-based Model for Simulation of Color Vision Deficiency. _IEEE TVCG_ 15(6)
+- Chromium, [Simulating color vision deficiencies in the Blink Renderer](https://developer.chrome.com/docs/chromium/cvd)
+- W3C, [WCAG 2.2 Success Criterion 1.4.1 Use of Color](https://www.w3.org/TR/WCAG22/#use-of-color)
