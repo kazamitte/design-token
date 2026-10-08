@@ -8,8 +8,12 @@ here in full.
 ## Tailwind CSS
 
 `tailwind/base/color/palette.css` holds the 286 color values of the Tailwind
-CSS v4 default theme. The colors themselves are unchanged; only the hue
-component of the achromatic steps is written as `0` rather than `none`.
+CSS v4.3 default theme. Those colors are unchanged; only the hue component of
+the achromatic steps is written as `0` rather than `none`.
+
+The same file adds 52 colors that are not in Tailwind: a 350 and a 750 step
+for each of the 26 hues, each the OKLCH midpoint of the two Tailwind steps
+around it. They are derived from the Tailwind values above.
 
 Tailwind CSS is also the framework this package extends.
 

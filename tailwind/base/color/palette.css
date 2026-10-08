@@ -32,7 +32,7 @@
  *
  * These are raw values
  * with no semantic meaning; consume them through the semantic
- * tokens in `color.css` instead of referencing them directly.
+ * tokens in `semantic.css` instead of referencing them directly.
  */
 @theme {
   --color-black: #000;

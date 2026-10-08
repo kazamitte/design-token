@@ -3,11 +3,26 @@
   "version": "0.3.0",
   "description": "Tailwind CSS v4 design token — color, typography, and style themes.",
   "license": "MIT",
+  "author": "kazaminn",
+  "homepage": "https://github.com/kazamitte/design-token#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazamitte/design-token.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kazamitte/design-token/issues"
+  },
   "type": "module",
-  "private": true,
   "sideEffects": [
     "*.css"
   ],
+  "files": [
+    "dist",
+    "docs",
+    "tailwind",
+    "THIRD-PARTY-NOTICES.md"
+  ],
+  "types": "./dist/generate-theme.d.mts",
   "exports": {
     ".": {
       "types": "./dist/generate-theme.d.mts",
@@ -21,5 +36,11 @@
     "./theme/color/*.css": "./tailwind/theme/color/*.css",
     "./theme/style/*.css": "./tailwind/theme/style/*.css",
     "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

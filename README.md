@@ -6,21 +6,15 @@ Every color token clears WCAG AA for normal text. No single scale can do that ac
 
 ## Setup
 
-The package is meant to be consumed inside a pnpm workspace and is not published to npm.
+Install the package alongside Tailwind CSS v4, which it expects as a peer dependency.
 
-Add it to the consuming package's `package.json` as a workspace dependency.
-
-```json
-{
-  "dependencies": {
-    "@kazamitte/design-token": "workspace:*"
-  }
-}
+```sh
+npm install @kazamitte/design-token tailwindcss
 ```
 
 ### CSS
 
-Import the Tailwind entry point.
+Import Tailwind first, then the package. The package does not import Tailwind itself, so it is loaded once and you keep control over how it is imported.
 
 ```css
 @import "tailwindcss";
@@ -37,7 +31,7 @@ body {
 }
 ```
 
-The `@source` directive is required because Tailwind v4 excludes `node_modules` from scanning by default.
+The `@source` directive is required because Tailwind v4 excludes `node_modules` from scanning by default. See [Detecting classes in source files](https://tailwindcss.com/docs/detecting-classes-in-source-files) in the Tailwind docs.
 
 ### JavaScript
 
@@ -47,7 +41,13 @@ The JavaScript API exposes one function, for generating a color theme.
 import { generateColorTheme } from "@kazamitte/design-token";
 ```
 
-Everything the package does is delivered as CSS, so the JavaScript API is optional. Reach for it to generate several themes at once, or to swap themes at runtime from the app.
+Everything the package does is delivered as CSS, so the JavaScript API is optional. Reach for it to generate several themes at once, or to swap themes at runtime from the app. See [Color theme generation](./docs/generate-color-theme.md) for usage.
+
+### Further reading
+
+- [Color theme generation](./docs/generate-color-theme.md) — writing a theme file with `generateColorTheme`
+- [Color pairings](./docs/color-pairings.md) — which secondary, base and link colors suit each primary (Japanese)
+- [Fixing class conflicts with tailwind-merge](./docs/tailwind-merge.md) — registering the package's utilities with tailwind-merge
 
 ---
 
