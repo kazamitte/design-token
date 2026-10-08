@@ -112,6 +112,19 @@ These four clear the WCAG AA threshold for normal text (4.5:1) across all 26 hue
 
 `fg-subtle` is exempt from the requirement: it is meant for decoration and disabled states.
 
+Roles can take different hues, so text from one role often sits on a surface from another — base text on a primary surface, or a link on a base surface. These clear 4.5:1 for text from any hue on a surface from any other hue, in both light and dark.
+
+- `fg-strong` on `bg`, `bg-subtle` or `bg-muted`
+- `fg` on `bg` or `bg-subtle`
+- `fg-muted` on `bg`
+- `fg-contrast` on `bg-solid`
+
+For links, `link-fg` is the `fg-muted` of the link hue and `link-fg-strong` is its `fg`, so a link on any `bg` clears, and `link-fg-strong` also clears on `bg-subtle`.
+
+One exception: in dark, indigo `fg` on a yellow or lime `bg-subtle` falls to about 4.3:1.
+
+Contrast is measured the way axe-core measures it: out-of-gamut colors are clipped to sRGB, nothing is rounded, and a pair passes only when its ratio is strictly greater than 4.5.
+
 ### Semantic tokens
 
 All 26 hues expose the same 15 tokens under `--c-*`. Use them where a specific color is wanted directly — tags, categories, charts.
@@ -122,7 +135,9 @@ All 26 hues expose the same 15 tokens under `--c-*`. Use them where a specific c
 
 ### Palette
 
-Based on the Tailwind 4.3.0 default theme. All 26 hues are defined, including mauve, olive, mist and taupe, which Tailwind added in 4.2.
+Adjusted from the Tailwind 4.3.0 default theme. All 26 hues are defined, including mauve, olive, mist and taupe, which Tailwind added in 4.2.
+
+Every hue also carries two steps Tailwind does not have — 350 and 750 — each the OKLCH midpoint of its neighbours. They let a semantic token sit between two Tailwind steps where neither one holds the contrast requirement across hues.
 
 ## Typography
 

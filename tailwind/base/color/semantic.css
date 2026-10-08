@@ -13,20 +13,43 @@
  * `fg-subtle` is excluded from the requirements and is intended for
  * non-text use: icons, decoration, and disabled states.
  *
+ * Roles can take different hues, so these pairs are also held across
+ * hues — text from any hue on a surface from any other, 26 x 26:
+ *
+ *   fg-strong x bg, bg-subtle, bg-muted
+ *   fg        x bg, bg-subtle
+ *   fg-muted  x bg
+ *   bg-solid  x contrast
+ *
+ * One exception is accepted: in dark, indigo `fg` on yellow or lime
+ * `bg-subtle` (about 4.3:1). Lightening indigo `fg` to clear it would
+ * pull the link hover color toward body text for color-blind readers.
+ *
+ * Contrast is measured the way axe-core measures it: out-of-gamut
+ * colors are clipped to sRGB, nothing is rounded, and a pair passes
+ * only when its ratio is strictly greater than 4.5.
+ *
  * Because the steps needed to clear those thresholds differ by hue,
  * hues are grouped rather than sharing one scale:
  *
  * Light
  * ├─ A  800/700/600/500  blue, indigo, violet, purple
- * ├─ B  900/800/700/600  the other 13 chromatic hues
+ * ├─ B  900/800/700/600  the other 10 chromatic hues
+ * ├─ C  900/800/750/600  yellow, lime, green
  * └─ N  900/800/700/500  neutrals
  *
  * Dark
  * ├─ 1  100/200/400/500  red, orange, pink, rose
- * ├─ 2  200/300/400/500  blue, indigo, violet, purple, fuchsia
- * ├─ 3  100/300/500/600  amber, yellow, lime, green, emerald,
- * │                       teal, cyan, sky
+ * ├─ 2  200/300/400/500  blue, violet, purple, fuchsia
+ * ├─ 3  100/300/500/600  amber, yellow, lime, emerald, teal,
+ * │                       cyan, sky
+ * ├─ 4  200/300/350/500  indigo
+ * ├─ 5  50/300/500/600   green
  * └─ N  100/200/400/500  neutrals
+ *
+ * Groups C and 4 use the palette's mid steps (350, 750): the
+ * Tailwind step on either side is too light or too dark for the
+ * cross-hue pairs.
  *
  * `bg-solid` and `border-solid` sit at 700 for chromatic hues so that
  * white labels clear AA; neutrals stay at 600, where they already do.
@@ -96,7 +119,7 @@
   --c-yellow-border-solid: var(--color-yellow-700);
   --c-yellow-fg-strong: var(--color-yellow-900);
   --c-yellow-fg: var(--color-yellow-800);
-  --c-yellow-fg-muted: var(--color-yellow-700);
+  --c-yellow-fg-muted: var(--color-yellow-750);
   --c-yellow-fg-subtle: var(--color-yellow-600);
   --c-yellow-fg-contrast: var(--color-white);
   --c-yellow-focus-ring: var(--color-yellow-500);
@@ -112,7 +135,7 @@
   --c-lime-border-solid: var(--color-lime-700);
   --c-lime-fg-strong: var(--color-lime-900);
   --c-lime-fg: var(--color-lime-800);
-  --c-lime-fg-muted: var(--color-lime-700);
+  --c-lime-fg-muted: var(--color-lime-750);
   --c-lime-fg-subtle: var(--color-lime-600);
   --c-lime-fg-contrast: var(--color-white);
   --c-lime-focus-ring: var(--color-lime-500);
@@ -128,7 +151,7 @@
   --c-green-border-solid: var(--color-green-700);
   --c-green-fg-strong: var(--color-green-900);
   --c-green-fg: var(--color-green-800);
-  --c-green-fg-muted: var(--color-green-700);
+  --c-green-fg-muted: var(--color-green-750);
   --c-green-fg-subtle: var(--color-green-600);
   --c-green-fg-contrast: var(--color-white);
   --c-green-focus-ring: var(--color-green-500);
@@ -544,7 +567,7 @@
   --c-lime-fg-contrast: var(--color-white);
   --c-lime-focus-ring: var(--color-lime-500);
 
-  /* green — dark group 3 */
+  /* green — dark group 5 */
   --c-green-bg: var(--color-green-950);
   --c-green-bg-subtle: var(--color-green-900);
   --c-green-bg-muted: var(--color-green-800);
@@ -554,7 +577,7 @@
   --c-green-border-muted: var(--color-green-800);
   --c-green-border-selected: var(--color-green-700);
   --c-green-border-solid: var(--color-green-700);
-  --c-green-fg-strong: var(--color-green-100);
+  --c-green-fg-strong: var(--color-green-50);
   --c-green-fg: var(--color-green-300);
   --c-green-fg-muted: var(--color-green-500);
   --c-green-fg-subtle: var(--color-green-600);
@@ -646,7 +669,7 @@
   --c-blue-fg-contrast: var(--color-white);
   --c-blue-focus-ring: var(--color-blue-500);
 
-  /* indigo — dark group 2 */
+  /* indigo — dark group 4 */
   --c-indigo-bg: var(--color-indigo-950);
   --c-indigo-bg-subtle: var(--color-indigo-900);
   --c-indigo-bg-muted: var(--color-indigo-800);
@@ -658,7 +681,7 @@
   --c-indigo-border-solid: var(--color-indigo-700);
   --c-indigo-fg-strong: var(--color-indigo-200);
   --c-indigo-fg: var(--color-indigo-300);
-  --c-indigo-fg-muted: var(--color-indigo-400);
+  --c-indigo-fg-muted: var(--color-indigo-350);
   --c-indigo-fg-subtle: var(--color-indigo-500);
   --c-indigo-fg-contrast: var(--color-white);
   --c-indigo-focus-ring: var(--color-indigo-500);

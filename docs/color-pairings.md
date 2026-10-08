@@ -145,7 +145,7 @@ Linkはprimaryとは独立して選ぶ。
 | Mode | `link-fg` | `link-fg-strong` |
 | ----- | --------- | ---------------- |
 | Light | 600 | 700 |
-| Dark | 400 | 300 |
+| Dark | 400 (indigoのみ350) | 300 |
 
 ### Link の順位
 
