@@ -123,7 +123,13 @@ For links, `link-fg` is the `fg-muted` of the link hue and `link-fg-strong` is i
 
 One exception: in dark, indigo `fg` on a yellow or lime `bg-subtle` falls to about 4.3:1.
 
-Contrast is measured the way axe-core measures it: out-of-gamut colors are clipped to sRGB, nothing is rounded, and a pair passes only when its ratio is strictly greater than 4.5.
+For non-text contrast (WCAG 1.4.11, 3:1), `border-solid`, `bg-solid` and `focus-ring` share a step and stand out from `bg` and `bg-subtle` of any hue, and from `bg-muted` of the same hue or of a neutral. Use them for input borders, checkboxes, progress bars, focus indicators and the like. A focus ring drawn against a solid control matches its fill, so separate the two with an offset in a `bg` color.
+
+In dark, `bg-solid` is a light fill and `fg-contrast` a dark label. No fill dark enough for a white label also stands out 3:1 from a dark surface.
+
+`fg-subtle` is not held to 3:1.
+
+Contrast is measured the way axe-core measures it: out-of-gamut colors are clipped to sRGB, nothing is rounded, and a pair passes only when its ratio is strictly greater than the threshold.
 
 ### Semantic tokens
 

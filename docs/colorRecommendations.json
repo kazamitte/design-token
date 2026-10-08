@@ -1,6 +1,6 @@
 {
   "red": {
-    "secondary": ["violet", "purple", "indigo", "fuchsia"],
+    "secondary": ["indigo", "fuchsia", "purple", "violet"],
     "base": {
       "harmonized": ["taupe", "stone"],
       "achromatic": ["neutral", "zinc", "gray"]
@@ -8,7 +8,7 @@
     "link": ["indigo", "violet", "purple", "blue"]
   },
   "orange": {
-    "secondary": ["violet", "purple", "indigo", "blue"],
+    "secondary": ["indigo", "purple", "violet", "fuchsia"],
     "base": {
       "harmonized": ["taupe", "stone"],
       "achromatic": ["neutral", "zinc", "gray"]
@@ -16,7 +16,7 @@
     "link": ["indigo", "violet", "purple", "blue"]
   },
   "amber": {
-    "secondary": ["violet", "purple", "indigo", "blue"],
+    "secondary": ["indigo", "violet", "purple", "blue"],
     "base": {
       "harmonized": ["stone", "taupe", "olive"],
       "achromatic": ["neutral", "zinc", "gray"]
@@ -24,7 +24,7 @@
     "link": ["indigo", "violet", "purple", "blue"]
   },
   "yellow": {
-    "secondary": ["violet", "purple", "indigo", "blue"],
+    "secondary": ["indigo", "violet", "purple", "blue"],
     "base": {
       "harmonized": ["olive", "stone"],
       "achromatic": ["neutral", "zinc", "gray"]
@@ -112,7 +112,7 @@
     "link": ["indigo", "violet", "purple", "blue"]
   },
   "fuchsia": {
-    "secondary": ["amber", "orange", "yellow", "red"],
+    "secondary": ["amber", "yellow", "orange", "lime"],
     "base": {
       "harmonized": ["mauve", "slate"],
       "achromatic": ["neutral", "zinc", "gray"]
@@ -120,7 +120,7 @@
     "link": ["indigo", "violet", "purple", "blue"]
   },
   "pink": {
-    "secondary": ["blue", "orange", "amber", "yellow"],
+    "secondary": ["orange", "amber", "yellow", "red"],
     "base": {
       "harmonized": ["mauve", "taupe"],
       "achromatic": ["neutral", "zinc", "gray"]
@@ -128,7 +128,7 @@
     "link": ["indigo", "violet", "purple", "blue"]
   },
   "rose": {
-    "secondary": ["violet", "purple", "indigo", "blue"],
+    "secondary": ["indigo", "fuchsia", "purple", "violet"],
     "base": {
       "harmonized": ["taupe", "stone"],
       "achromatic": ["neutral", "zinc", "gray"]

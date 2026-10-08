@@ -8,10 +8,10 @@ SecondaryとBase (harmonized)は推奨順に並べている。Base (achromatic)�
 
 | Primary | Secondary | Base (harmonized) | Base (achromatic) | Link |
 | --------- | ------------------------------- | ------------------- | ------------------- | ---------------------------- |
-| `red` | violet, purple, indigo, fuchsia | taupe, stone | neutral, zinc, gray | indigo, violet, purple, blue |
-| `orange` | violet, purple, indigo, blue | taupe, stone | neutral, zinc, gray | indigo, violet, purple, blue |
-| `amber` | violet, purple, indigo, blue | stone, taupe, olive | neutral, zinc, gray | indigo, violet, purple, blue |
-| `yellow` | violet, purple, indigo, blue | olive, stone | neutral, zinc, gray | indigo, violet, purple, blue |
+| `red` | indigo, fuchsia, purple, violet | taupe, stone | neutral, zinc, gray | indigo, violet, purple, blue |
+| `orange` | indigo, purple, violet, fuchsia | taupe, stone | neutral, zinc, gray | indigo, violet, purple, blue |
+| `amber` | indigo, violet, purple, blue | stone, taupe, olive | neutral, zinc, gray | indigo, violet, purple, blue |
+| `yellow` | indigo, violet, purple, blue | olive, stone | neutral, zinc, gray | indigo, violet, purple, blue |
 | `lime` | indigo, violet, purple, blue | olive, stone | neutral, gray, zinc | indigo, violet, purple, blue |
 | `green` | indigo, blue, violet, purple | olive, mist | neutral, gray, zinc | indigo, violet, purple, blue |
 | `emerald` | indigo, blue, violet, purple | mist, olive | neutral, gray, zinc | indigo, violet, purple, blue |
@@ -22,9 +22,9 @@ SecondaryとBase (harmonized)は推奨順に並べている。Base (achromatic)�
 | `indigo` | lime, yellow, amber, orange | slate, mauve | neutral, zinc, gray | indigo, violet, purple, blue |
 | `violet` | yellow, lime, amber, orange | mauve, slate | neutral, zinc, gray | indigo, violet, purple, blue |
 | `purple` | yellow, amber, lime, orange | mauve, slate | neutral, zinc, gray | indigo, violet, purple, blue |
-| `fuchsia` | amber, orange, yellow, red | mauve, slate | neutral, zinc, gray | indigo, violet, purple, blue |
-| `pink` | blue, orange, amber, yellow | mauve, taupe | neutral, zinc, gray | indigo, violet, purple, blue |
-| `rose` | violet, purple, indigo, blue | taupe, stone | neutral, zinc, gray | indigo, violet, purple, blue |
+| `fuchsia` | amber, yellow, orange, lime | mauve, slate | neutral, zinc, gray | indigo, violet, purple, blue |
+| `pink` | orange, amber, yellow, red | mauve, taupe | neutral, zinc, gray | indigo, violet, purple, blue |
+| `rose` | indigo, fuchsia, purple, violet | taupe, stone | neutral, zinc, gray | indigo, violet, purple, blue |
 
 ## Secondary の選び方
 
@@ -37,13 +37,14 @@ primary以外の16色すべてについて、P型・D型に変換した後の色
 
 なお、T型（3型色覚/tritan）は、青系の色に対応するが、まれな色覚特性であるため今回の評価からは除外している。
 
-評価には次の3つの表示条件を使う。
+評価には次の4つの表示条件を使う。
 
-- `bg-solid`（step 700）
+- ライトモードの`bg-solid`（step 700）
+- ダークモードの`bg-solid`（step 350）
 - ライトモードの`fg-subtle`
 - ダークモードの`fg-subtle`
 
-P型・D型それぞれで測るため、合計6条件になる。そのうち最も小さいΔE2000値を、そのprimaryとsecondaryの組み合わせのスコアとする。
+P型・D型それぞれで測るため、合計8条件になる。そのうち最も小さいΔE2000値を、そのprimaryとsecondaryの組み合わせのスコアとする。
 
 つまり、ある条件だけで大きく離れて見える色ではなく、P型・D型やライト・ダークをまたいでも安定して見分けやすい色を優先している。
 
@@ -82,15 +83,16 @@ OKLCH
 
 評価には、実際にsemantic tokenが参照する次の条件を使う。
 
-- `bg-solid`: step 700
+- ライトモードの`bg-solid`: step 700
+- ダークモードの`bg-solid`: step 350
 - ライトモードの`fg-subtle`: 色ごとにstep 500または600
 - ダークモードの`fg-subtle`: 色ごとにstep 500または600
 
-P型・D型それぞれについて3つの表示条件を測り、6条件のうち最も小さいΔE2000をその組み合わせの値とする。
+P型・D型それぞれについて4つの表示条件を測り、8条件のうち最も小さいΔE2000をその組み合わせの値とする。
 
 代表的な結果は次のとおり。
 
-- `teal`と`pink`を除く15色では、表の上位候補が39以上
+- `teal`と`pink`を除く15色では、表の上位4候補はすべて26以上（`rose`が26〜27、`red`と`emerald`が35前後、ほかは40以上）
 - `teal`では23〜24程度
 - `pink`では最大でも16程度
 - `red` × `green`: 6
