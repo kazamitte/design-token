@@ -22,6 +22,7 @@
   --r-error-border-subtle: var(--c-red-border-subtle);
   --r-error-border-muted: var(--c-red-border-muted);
   --r-error-border-selected: var(--c-red-border-selected);
+  --r-error-border: var(--c-red-border);
   --r-error-border-solid: var(--c-red-border-solid);
   --r-error-fg-strong: var(--c-red-fg-strong);
   --r-error-fg: var(--c-red-fg);
@@ -38,6 +39,7 @@
   --r-warning-border-subtle: var(--c-amber-border-subtle);
   --r-warning-border-muted: var(--c-amber-border-muted);
   --r-warning-border-selected: var(--c-amber-border-selected);
+  --r-warning-border: var(--c-amber-border);
   --r-warning-border-solid: var(--c-amber-border-solid);
   --r-warning-fg-strong: var(--c-amber-fg-strong);
   --r-warning-fg: var(--c-amber-fg);
@@ -54,6 +56,7 @@
   --r-success-border-subtle: var(--c-green-border-subtle);
   --r-success-border-muted: var(--c-green-border-muted);
   --r-success-border-selected: var(--c-green-border-selected);
+  --r-success-border: var(--c-green-border);
   --r-success-border-solid: var(--c-green-border-solid);
   --r-success-fg-strong: var(--c-green-fg-strong);
   --r-success-fg: var(--c-green-fg);
@@ -70,6 +73,7 @@
   --r-info-border-subtle: var(--c-blue-border-subtle);
   --r-info-border-muted: var(--c-blue-border-muted);
   --r-info-border-selected: var(--c-blue-border-selected);
+  --r-info-border: var(--c-blue-border);
   --r-info-border-solid: var(--c-blue-border-solid);
   --r-info-fg-strong: var(--c-blue-fg-strong);
   --r-info-fg: var(--c-blue-fg);

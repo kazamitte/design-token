@@ -162,6 +162,7 @@ export const tv = createTV({
           'border-subtle',
           'border-muted',
           'border-selected',
+          'border',
           'border-solid',
         ]),
         'outline-color': roleClasses(['focus-ring']),

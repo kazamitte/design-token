@@ -17,6 +17,7 @@ const ROLE_TOKENS = [
   "border-subtle",
   "border-muted",
   "border-selected",
+  "border",
   "border-solid",
   "fg-strong",
   "fg",

@@ -93,13 +93,13 @@ tailwind/
 
 Each role carries 15 tokens.
 
-| Group      | Tokens                                                             |
-| ---------- | ------------------------------------------------------------------ |
-| Text       | `fg-strong`, `fg`, `fg-muted`, `fg-subtle`                         |
-| Background | `bg`, `bg-subtle`, `bg-muted`, `bg-selected`, `bg-solid`           |
-| Border     | `border-subtle`, `border-muted`, `border-selected`, `border-solid` |
-| Contrast   | `fg-contrast`                                                      |
-| Focus ring | `focus-ring`                                                       |
+| Group      | Tokens                                                                       |
+| ---------- | ---------------------------------------------------------------------------- |
+| Text       | `fg-strong`, `fg`, `fg-muted`, `fg-subtle`                                   |
+| Background | `bg`, `bg-subtle`, `bg-muted`, `bg-selected`, `bg-solid`                     |
+| Border     | `border-subtle`, `border-muted`, `border-selected`, `border`, `border-solid` |
+| Contrast   | `fg-contrast`                                                                |
+| Focus ring | `focus-ring`                                                                 |
 
 ### Pairs that clear the contrast requirement
 
@@ -128,6 +128,15 @@ For non-text contrast (WCAG 1.4.11, 3:1), `border-solid`, `bg-solid` and `focus-
 In dark, `bg-solid` is a light fill and `fg-contrast` a dark label. No fill dark enough for a white label also stands out 3:1 from a dark surface.
 
 `fg-subtle` is not held to 3:1.
+
+### Choosing a border
+
+- `border` is the default frame for containers: cards, lists, tables, code blocks, popovers, menus and toasts. It is decorative, about 2.5:1 against `bg`, and is not held to 3:1.
+- `border-solid` is for controls that need 3:1 under WCAG 1.4.11, such as inputs and checkboxes.
+- `border-subtle` and `border-muted` are for faint dividers.
+- `border-selected` marks a selected state.
+
+The steps run `border-subtle` < `border-muted` < `border-selected` < `border` < `border-solid` in strength, in every hue and both modes.
 
 Contrast is measured the way axe-core measures it: out-of-gamut colors are clipped to sRGB, nothing is rounded, and a pair passes only when its ratio is strictly greater than the threshold.
 

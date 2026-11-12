@@ -57,6 +57,10 @@
  * 1.4.11), and the label on bg-solid must clear 4.5:1. A focus ring
  * matches a solid fill, so it needs an offset to show against one.
  *
+ * `border` sits between `border-selected` and `border-solid`: step 400 in
+ * light and 600 in dark, for every hue. It is the decorative frame for
+ * containers, about 2.5:1 against bg, and is not held to 3:1.
+ *
  * Light: 700 for chromatic hues, 600 for neutrals, with a white label.
  * Dark:  350 for every hue, with the hue's own 950 as the label. No
  *        step dark enough for a white label also stands out 3:1 from a
@@ -76,6 +80,7 @@
   --c-red-border-subtle: var(--color-red-100);
   --c-red-border-muted: var(--color-red-200);
   --c-red-border-selected: var(--color-red-300);
+  --c-red-border: var(--color-red-400);
   --c-red-border-solid: var(--color-red-700);
   --c-red-fg-strong: var(--color-red-900);
   --c-red-fg: var(--color-red-800);
@@ -92,6 +97,7 @@
   --c-orange-border-subtle: var(--color-orange-100);
   --c-orange-border-muted: var(--color-orange-200);
   --c-orange-border-selected: var(--color-orange-300);
+  --c-orange-border: var(--color-orange-400);
   --c-orange-border-solid: var(--color-orange-700);
   --c-orange-fg-strong: var(--color-orange-900);
   --c-orange-fg: var(--color-orange-800);
@@ -108,6 +114,7 @@
   --c-amber-border-subtle: var(--color-amber-100);
   --c-amber-border-muted: var(--color-amber-200);
   --c-amber-border-selected: var(--color-amber-300);
+  --c-amber-border: var(--color-amber-400);
   --c-amber-border-solid: var(--color-amber-700);
   --c-amber-fg-strong: var(--color-amber-900);
   --c-amber-fg: var(--color-amber-800);
@@ -124,6 +131,7 @@
   --c-yellow-border-subtle: var(--color-yellow-100);
   --c-yellow-border-muted: var(--color-yellow-200);
   --c-yellow-border-selected: var(--color-yellow-300);
+  --c-yellow-border: var(--color-yellow-400);
   --c-yellow-border-solid: var(--color-yellow-700);
   --c-yellow-fg-strong: var(--color-yellow-900);
   --c-yellow-fg: var(--color-yellow-800);
@@ -140,6 +148,7 @@
   --c-lime-border-subtle: var(--color-lime-100);
   --c-lime-border-muted: var(--color-lime-200);
   --c-lime-border-selected: var(--color-lime-300);
+  --c-lime-border: var(--color-lime-400);
   --c-lime-border-solid: var(--color-lime-700);
   --c-lime-fg-strong: var(--color-lime-900);
   --c-lime-fg: var(--color-lime-800);
@@ -156,6 +165,7 @@
   --c-green-border-subtle: var(--color-green-100);
   --c-green-border-muted: var(--color-green-200);
   --c-green-border-selected: var(--color-green-300);
+  --c-green-border: var(--color-green-400);
   --c-green-border-solid: var(--color-green-700);
   --c-green-fg-strong: var(--color-green-900);
   --c-green-fg: var(--color-green-800);
@@ -172,6 +182,7 @@
   --c-emerald-border-subtle: var(--color-emerald-100);
   --c-emerald-border-muted: var(--color-emerald-200);
   --c-emerald-border-selected: var(--color-emerald-300);
+  --c-emerald-border: var(--color-emerald-400);
   --c-emerald-border-solid: var(--color-emerald-700);
   --c-emerald-fg-strong: var(--color-emerald-900);
   --c-emerald-fg: var(--color-emerald-800);
@@ -188,6 +199,7 @@
   --c-teal-border-subtle: var(--color-teal-100);
   --c-teal-border-muted: var(--color-teal-200);
   --c-teal-border-selected: var(--color-teal-300);
+  --c-teal-border: var(--color-teal-400);
   --c-teal-border-solid: var(--color-teal-700);
   --c-teal-fg-strong: var(--color-teal-900);
   --c-teal-fg: var(--color-teal-800);
@@ -204,6 +216,7 @@
   --c-cyan-border-subtle: var(--color-cyan-100);
   --c-cyan-border-muted: var(--color-cyan-200);
   --c-cyan-border-selected: var(--color-cyan-300);
+  --c-cyan-border: var(--color-cyan-400);
   --c-cyan-border-solid: var(--color-cyan-700);
   --c-cyan-fg-strong: var(--color-cyan-900);
   --c-cyan-fg: var(--color-cyan-800);
@@ -220,6 +233,7 @@
   --c-sky-border-subtle: var(--color-sky-100);
   --c-sky-border-muted: var(--color-sky-200);
   --c-sky-border-selected: var(--color-sky-300);
+  --c-sky-border: var(--color-sky-400);
   --c-sky-border-solid: var(--color-sky-700);
   --c-sky-fg-strong: var(--color-sky-900);
   --c-sky-fg: var(--color-sky-800);
@@ -236,6 +250,7 @@
   --c-blue-border-subtle: var(--color-blue-100);
   --c-blue-border-muted: var(--color-blue-200);
   --c-blue-border-selected: var(--color-blue-300);
+  --c-blue-border: var(--color-blue-400);
   --c-blue-border-solid: var(--color-blue-700);
   --c-blue-fg-strong: var(--color-blue-800);
   --c-blue-fg: var(--color-blue-700);
@@ -252,6 +267,7 @@
   --c-indigo-border-subtle: var(--color-indigo-100);
   --c-indigo-border-muted: var(--color-indigo-200);
   --c-indigo-border-selected: var(--color-indigo-300);
+  --c-indigo-border: var(--color-indigo-400);
   --c-indigo-border-solid: var(--color-indigo-700);
   --c-indigo-fg-strong: var(--color-indigo-800);
   --c-indigo-fg: var(--color-indigo-700);
@@ -268,6 +284,7 @@
   --c-violet-border-subtle: var(--color-violet-100);
   --c-violet-border-muted: var(--color-violet-200);
   --c-violet-border-selected: var(--color-violet-300);
+  --c-violet-border: var(--color-violet-400);
   --c-violet-border-solid: var(--color-violet-700);
   --c-violet-fg-strong: var(--color-violet-800);
   --c-violet-fg: var(--color-violet-700);
@@ -284,6 +301,7 @@
   --c-purple-border-subtle: var(--color-purple-100);
   --c-purple-border-muted: var(--color-purple-200);
   --c-purple-border-selected: var(--color-purple-300);
+  --c-purple-border: var(--color-purple-400);
   --c-purple-border-solid: var(--color-purple-700);
   --c-purple-fg-strong: var(--color-purple-800);
   --c-purple-fg: var(--color-purple-700);
@@ -300,6 +318,7 @@
   --c-fuchsia-border-subtle: var(--color-fuchsia-100);
   --c-fuchsia-border-muted: var(--color-fuchsia-200);
   --c-fuchsia-border-selected: var(--color-fuchsia-300);
+  --c-fuchsia-border: var(--color-fuchsia-400);
   --c-fuchsia-border-solid: var(--color-fuchsia-700);
   --c-fuchsia-fg-strong: var(--color-fuchsia-900);
   --c-fuchsia-fg: var(--color-fuchsia-800);
@@ -316,6 +335,7 @@
   --c-pink-border-subtle: var(--color-pink-100);
   --c-pink-border-muted: var(--color-pink-200);
   --c-pink-border-selected: var(--color-pink-300);
+  --c-pink-border: var(--color-pink-400);
   --c-pink-border-solid: var(--color-pink-700);
   --c-pink-fg-strong: var(--color-pink-900);
   --c-pink-fg: var(--color-pink-800);
@@ -332,6 +352,7 @@
   --c-rose-border-subtle: var(--color-rose-100);
   --c-rose-border-muted: var(--color-rose-200);
   --c-rose-border-selected: var(--color-rose-300);
+  --c-rose-border: var(--color-rose-400);
   --c-rose-border-solid: var(--color-rose-700);
   --c-rose-fg-strong: var(--color-rose-900);
   --c-rose-fg: var(--color-rose-800);
@@ -348,6 +369,7 @@
   --c-slate-border-subtle: var(--color-slate-100);
   --c-slate-border-muted: var(--color-slate-200);
   --c-slate-border-selected: var(--color-slate-300);
+  --c-slate-border: var(--color-slate-400);
   --c-slate-border-solid: var(--color-slate-600);
   --c-slate-fg-strong: var(--color-slate-900);
   --c-slate-fg: var(--color-slate-800);
@@ -364,6 +386,7 @@
   --c-gray-border-subtle: var(--color-gray-100);
   --c-gray-border-muted: var(--color-gray-200);
   --c-gray-border-selected: var(--color-gray-300);
+  --c-gray-border: var(--color-gray-400);
   --c-gray-border-solid: var(--color-gray-600);
   --c-gray-fg-strong: var(--color-gray-900);
   --c-gray-fg: var(--color-gray-800);
@@ -380,6 +403,7 @@
   --c-zinc-border-subtle: var(--color-zinc-100);
   --c-zinc-border-muted: var(--color-zinc-200);
   --c-zinc-border-selected: var(--color-zinc-300);
+  --c-zinc-border: var(--color-zinc-400);
   --c-zinc-border-solid: var(--color-zinc-600);
   --c-zinc-fg-strong: var(--color-zinc-900);
   --c-zinc-fg: var(--color-zinc-800);
@@ -396,6 +420,7 @@
   --c-neutral-border-subtle: var(--color-neutral-100);
   --c-neutral-border-muted: var(--color-neutral-200);
   --c-neutral-border-selected: var(--color-neutral-300);
+  --c-neutral-border: var(--color-neutral-400);
   --c-neutral-border-solid: var(--color-neutral-600);
   --c-neutral-fg-strong: var(--color-neutral-900);
   --c-neutral-fg: var(--color-neutral-800);
@@ -412,6 +437,7 @@
   --c-stone-border-subtle: var(--color-stone-100);
   --c-stone-border-muted: var(--color-stone-200);
   --c-stone-border-selected: var(--color-stone-300);
+  --c-stone-border: var(--color-stone-400);
   --c-stone-border-solid: var(--color-stone-600);
   --c-stone-fg-strong: var(--color-stone-900);
   --c-stone-fg: var(--color-stone-800);
@@ -429,6 +455,7 @@
   --c-mauve-border-subtle: var(--color-mauve-100);
   --c-mauve-border-muted: var(--color-mauve-200);
   --c-mauve-border-selected: var(--color-mauve-300);
+  --c-mauve-border: var(--color-mauve-400);
   --c-mauve-border-solid: var(--color-mauve-600);
   --c-mauve-fg-strong: var(--color-mauve-900);
   --c-mauve-fg: var(--color-mauve-800);
@@ -446,6 +473,7 @@
   --c-olive-border-subtle: var(--color-olive-100);
   --c-olive-border-muted: var(--color-olive-200);
   --c-olive-border-selected: var(--color-olive-300);
+  --c-olive-border: var(--color-olive-400);
   --c-olive-border-solid: var(--color-olive-600);
   --c-olive-fg-strong: var(--color-olive-900);
   --c-olive-fg: var(--color-olive-800);
@@ -463,6 +491,7 @@
   --c-mist-border-subtle: var(--color-mist-100);
   --c-mist-border-muted: var(--color-mist-200);
   --c-mist-border-selected: var(--color-mist-300);
+  --c-mist-border: var(--color-mist-400);
   --c-mist-border-solid: var(--color-mist-600);
   --c-mist-fg-strong: var(--color-mist-900);
   --c-mist-fg: var(--color-mist-800);
@@ -480,6 +509,7 @@
   --c-taupe-border-subtle: var(--color-taupe-100);
   --c-taupe-border-muted: var(--color-taupe-200);
   --c-taupe-border-selected: var(--color-taupe-300);
+  --c-taupe-border: var(--color-taupe-400);
   --c-taupe-border-solid: var(--color-taupe-600);
   --c-taupe-fg-strong: var(--color-taupe-900);
   --c-taupe-fg: var(--color-taupe-800);
@@ -499,6 +529,7 @@
   --c-red-border-subtle: var(--color-red-900);
   --c-red-border-muted: var(--color-red-800);
   --c-red-border-selected: var(--color-red-700);
+  --c-red-border: var(--color-red-600);
   --c-red-border-solid: var(--color-red-350);
   --c-red-fg-strong: var(--color-red-100);
   --c-red-fg: var(--color-red-200);
@@ -516,6 +547,7 @@
   --c-orange-border-subtle: var(--color-orange-900);
   --c-orange-border-muted: var(--color-orange-800);
   --c-orange-border-selected: var(--color-orange-700);
+  --c-orange-border: var(--color-orange-600);
   --c-orange-border-solid: var(--color-orange-350);
   --c-orange-fg-strong: var(--color-orange-100);
   --c-orange-fg: var(--color-orange-200);
@@ -533,6 +565,7 @@
   --c-amber-border-subtle: var(--color-amber-900);
   --c-amber-border-muted: var(--color-amber-800);
   --c-amber-border-selected: var(--color-amber-700);
+  --c-amber-border: var(--color-amber-600);
   --c-amber-border-solid: var(--color-amber-350);
   --c-amber-fg-strong: var(--color-amber-100);
   --c-amber-fg: var(--color-amber-300);
@@ -550,6 +583,7 @@
   --c-yellow-border-subtle: var(--color-yellow-900);
   --c-yellow-border-muted: var(--color-yellow-800);
   --c-yellow-border-selected: var(--color-yellow-700);
+  --c-yellow-border: var(--color-yellow-600);
   --c-yellow-border-solid: var(--color-yellow-350);
   --c-yellow-fg-strong: var(--color-yellow-100);
   --c-yellow-fg: var(--color-yellow-300);
@@ -567,6 +601,7 @@
   --c-lime-border-subtle: var(--color-lime-900);
   --c-lime-border-muted: var(--color-lime-800);
   --c-lime-border-selected: var(--color-lime-700);
+  --c-lime-border: var(--color-lime-600);
   --c-lime-border-solid: var(--color-lime-350);
   --c-lime-fg-strong: var(--color-lime-100);
   --c-lime-fg: var(--color-lime-300);
@@ -584,6 +619,7 @@
   --c-green-border-subtle: var(--color-green-900);
   --c-green-border-muted: var(--color-green-800);
   --c-green-border-selected: var(--color-green-700);
+  --c-green-border: var(--color-green-600);
   --c-green-border-solid: var(--color-green-350);
   --c-green-fg-strong: var(--color-green-50);
   --c-green-fg: var(--color-green-300);
@@ -601,6 +637,7 @@
   --c-emerald-border-subtle: var(--color-emerald-900);
   --c-emerald-border-muted: var(--color-emerald-800);
   --c-emerald-border-selected: var(--color-emerald-700);
+  --c-emerald-border: var(--color-emerald-600);
   --c-emerald-border-solid: var(--color-emerald-350);
   --c-emerald-fg-strong: var(--color-emerald-100);
   --c-emerald-fg: var(--color-emerald-300);
@@ -618,6 +655,7 @@
   --c-teal-border-subtle: var(--color-teal-900);
   --c-teal-border-muted: var(--color-teal-800);
   --c-teal-border-selected: var(--color-teal-700);
+  --c-teal-border: var(--color-teal-600);
   --c-teal-border-solid: var(--color-teal-350);
   --c-teal-fg-strong: var(--color-teal-100);
   --c-teal-fg: var(--color-teal-300);
@@ -635,6 +673,7 @@
   --c-cyan-border-subtle: var(--color-cyan-900);
   --c-cyan-border-muted: var(--color-cyan-800);
   --c-cyan-border-selected: var(--color-cyan-700);
+  --c-cyan-border: var(--color-cyan-600);
   --c-cyan-border-solid: var(--color-cyan-350);
   --c-cyan-fg-strong: var(--color-cyan-100);
   --c-cyan-fg: var(--color-cyan-300);
@@ -652,6 +691,7 @@
   --c-sky-border-subtle: var(--color-sky-900);
   --c-sky-border-muted: var(--color-sky-800);
   --c-sky-border-selected: var(--color-sky-700);
+  --c-sky-border: var(--color-sky-600);
   --c-sky-border-solid: var(--color-sky-350);
   --c-sky-fg-strong: var(--color-sky-100);
   --c-sky-fg: var(--color-sky-300);
@@ -669,6 +709,7 @@
   --c-blue-border-subtle: var(--color-blue-900);
   --c-blue-border-muted: var(--color-blue-800);
   --c-blue-border-selected: var(--color-blue-700);
+  --c-blue-border: var(--color-blue-600);
   --c-blue-border-solid: var(--color-blue-350);
   --c-blue-fg-strong: var(--color-blue-200);
   --c-blue-fg: var(--color-blue-300);
@@ -686,6 +727,7 @@
   --c-indigo-border-subtle: var(--color-indigo-900);
   --c-indigo-border-muted: var(--color-indigo-800);
   --c-indigo-border-selected: var(--color-indigo-700);
+  --c-indigo-border: var(--color-indigo-600);
   --c-indigo-border-solid: var(--color-indigo-350);
   --c-indigo-fg-strong: var(--color-indigo-200);
   --c-indigo-fg: var(--color-indigo-300);
@@ -703,6 +745,7 @@
   --c-violet-border-subtle: var(--color-violet-900);
   --c-violet-border-muted: var(--color-violet-800);
   --c-violet-border-selected: var(--color-violet-700);
+  --c-violet-border: var(--color-violet-600);
   --c-violet-border-solid: var(--color-violet-350);
   --c-violet-fg-strong: var(--color-violet-200);
   --c-violet-fg: var(--color-violet-300);
@@ -720,6 +763,7 @@
   --c-purple-border-subtle: var(--color-purple-900);
   --c-purple-border-muted: var(--color-purple-800);
   --c-purple-border-selected: var(--color-purple-700);
+  --c-purple-border: var(--color-purple-600);
   --c-purple-border-solid: var(--color-purple-350);
   --c-purple-fg-strong: var(--color-purple-200);
   --c-purple-fg: var(--color-purple-300);
@@ -737,6 +781,7 @@
   --c-fuchsia-border-subtle: var(--color-fuchsia-900);
   --c-fuchsia-border-muted: var(--color-fuchsia-800);
   --c-fuchsia-border-selected: var(--color-fuchsia-700);
+  --c-fuchsia-border: var(--color-fuchsia-600);
   --c-fuchsia-border-solid: var(--color-fuchsia-350);
   --c-fuchsia-fg-strong: var(--color-fuchsia-200);
   --c-fuchsia-fg: var(--color-fuchsia-300);
@@ -754,6 +799,7 @@
   --c-pink-border-subtle: var(--color-pink-900);
   --c-pink-border-muted: var(--color-pink-800);
   --c-pink-border-selected: var(--color-pink-700);
+  --c-pink-border: var(--color-pink-600);
   --c-pink-border-solid: var(--color-pink-350);
   --c-pink-fg-strong: var(--color-pink-100);
   --c-pink-fg: var(--color-pink-200);
@@ -771,6 +817,7 @@
   --c-rose-border-subtle: var(--color-rose-900);
   --c-rose-border-muted: var(--color-rose-800);
   --c-rose-border-selected: var(--color-rose-700);
+  --c-rose-border: var(--color-rose-600);
   --c-rose-border-solid: var(--color-rose-350);
   --c-rose-fg-strong: var(--color-rose-100);
   --c-rose-fg: var(--color-rose-200);
@@ -788,6 +835,7 @@
   --c-slate-border-subtle: var(--color-slate-900);
   --c-slate-border-muted: var(--color-slate-800);
   --c-slate-border-selected: var(--color-slate-700);
+  --c-slate-border: var(--color-slate-600);
   --c-slate-border-solid: var(--color-slate-350);
   --c-slate-fg-strong: var(--color-slate-100);
   --c-slate-fg: var(--color-slate-200);
@@ -805,6 +853,7 @@
   --c-gray-border-subtle: var(--color-gray-900);
   --c-gray-border-muted: var(--color-gray-800);
   --c-gray-border-selected: var(--color-gray-700);
+  --c-gray-border: var(--color-gray-600);
   --c-gray-border-solid: var(--color-gray-350);
   --c-gray-fg-strong: var(--color-gray-100);
   --c-gray-fg: var(--color-gray-200);
@@ -822,6 +871,7 @@
   --c-zinc-border-subtle: var(--color-zinc-900);
   --c-zinc-border-muted: var(--color-zinc-800);
   --c-zinc-border-selected: var(--color-zinc-700);
+  --c-zinc-border: var(--color-zinc-600);
   --c-zinc-border-solid: var(--color-zinc-350);
   --c-zinc-fg-strong: var(--color-zinc-100);
   --c-zinc-fg: var(--color-zinc-200);
@@ -839,6 +889,7 @@
   --c-neutral-border-subtle: var(--color-neutral-900);
   --c-neutral-border-muted: var(--color-neutral-800);
   --c-neutral-border-selected: var(--color-neutral-700);
+  --c-neutral-border: var(--color-neutral-600);
   --c-neutral-border-solid: var(--color-neutral-350);
   --c-neutral-fg-strong: var(--color-neutral-100);
   --c-neutral-fg: var(--color-neutral-200);
@@ -856,6 +907,7 @@
   --c-stone-border-subtle: var(--color-stone-900);
   --c-stone-border-muted: var(--color-stone-800);
   --c-stone-border-selected: var(--color-stone-700);
+  --c-stone-border: var(--color-stone-600);
   --c-stone-border-solid: var(--color-stone-350);
   --c-stone-fg-strong: var(--color-stone-100);
   --c-stone-fg: var(--color-stone-200);
@@ -873,6 +925,7 @@
   --c-mauve-border-subtle: var(--color-mauve-900);
   --c-mauve-border-muted: var(--color-mauve-800);
   --c-mauve-border-selected: var(--color-mauve-700);
+  --c-mauve-border: var(--color-mauve-600);
   --c-mauve-border-solid: var(--color-mauve-350);
   --c-mauve-fg-strong: var(--color-mauve-100);
   --c-mauve-fg: var(--color-mauve-200);
@@ -890,6 +943,7 @@
   --c-olive-border-subtle: var(--color-olive-900);
   --c-olive-border-muted: var(--color-olive-800);
   --c-olive-border-selected: var(--color-olive-700);
+  --c-olive-border: var(--color-olive-600);
   --c-olive-border-solid: var(--color-olive-350);
   --c-olive-fg-strong: var(--color-olive-100);
   --c-olive-fg: var(--color-olive-200);
@@ -907,6 +961,7 @@
   --c-mist-border-subtle: var(--color-mist-900);
   --c-mist-border-muted: var(--color-mist-800);
   --c-mist-border-selected: var(--color-mist-700);
+  --c-mist-border: var(--color-mist-600);
   --c-mist-border-solid: var(--color-mist-350);
   --c-mist-fg-strong: var(--color-mist-100);
   --c-mist-fg: var(--color-mist-200);
@@ -924,6 +979,7 @@
   --c-taupe-border-subtle: var(--color-taupe-900);
   --c-taupe-border-muted: var(--color-taupe-800);
   --c-taupe-border-selected: var(--color-taupe-700);
+  --c-taupe-border: var(--color-taupe-600);
   --c-taupe-border-solid: var(--color-taupe-350);
   --c-taupe-fg-strong: var(--color-taupe-100);
   --c-taupe-fg: var(--color-taupe-200);

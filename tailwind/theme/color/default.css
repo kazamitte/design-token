@@ -15,6 +15,7 @@
   --r-base-border-subtle: var(--c-slate-border-subtle);
   --r-base-border-muted: var(--c-slate-border-muted);
   --r-base-border-selected: var(--c-slate-border-selected);
+  --r-base-border: var(--c-slate-border);
   --r-base-border-solid: var(--c-slate-border-solid);
   --r-base-fg-strong: var(--c-slate-fg-strong);
   --r-base-fg: var(--c-slate-fg);
@@ -31,6 +32,7 @@
   --r-primary-border-subtle: var(--c-sky-border-subtle);
   --r-primary-border-muted: var(--c-sky-border-muted);
   --r-primary-border-selected: var(--c-sky-border-selected);
+  --r-primary-border: var(--c-sky-border);
   --r-primary-border-solid: var(--c-sky-border-solid);
   --r-primary-fg-strong: var(--c-sky-fg-strong);
   --r-primary-fg: var(--c-sky-fg);
@@ -47,6 +49,7 @@
   --r-secondary-border-subtle: var(--c-lime-border-subtle);
   --r-secondary-border-muted: var(--c-lime-border-muted);
   --r-secondary-border-selected: var(--c-lime-border-selected);
+  --r-secondary-border: var(--c-lime-border);
   --r-secondary-border-solid: var(--c-lime-border-solid);
   --r-secondary-fg-strong: var(--c-lime-fg-strong);
   --r-secondary-fg: var(--c-lime-fg);
