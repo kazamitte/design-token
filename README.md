@@ -131,12 +131,43 @@ In dark, `bg-solid` is a light fill and `fg-contrast` a dark label. No fill dark
 
 ### Choosing a border
 
-- `border` is the default frame for containers: cards, lists, tables, code blocks, popovers, menus and toasts. It is decorative, about 2.5:1 against `bg`, and is not held to 3:1.
+- `border` is the default frame for containers: cards, lists, tables, code blocks, popovers, menus and toasts. It is decorative, not held to 3:1, and its step is chosen per hue so that it lands near 2.5:1 against that hue's `bg` (see the table below).
 - `border-solid` is for controls that need 3:1 under WCAG 1.4.11, such as inputs and checkboxes.
 - `border-subtle` and `border-muted` are for faint dividers.
 - `border-selected` marks a selected state.
 
 The steps run `border-subtle` < `border-muted` < `border-selected` < `border` < `border-solid` in strength, in every hue and both modes.
+
+The `border` step differs by hue because the same palette step contrasts unevenly with each hue's `bg`. In light mode it is picked from 400 to 600 to land in about 2.1 to 3.0:1; orange through sky need a darker step than the rest. In dark mode it is 600 for every hue: the step above it is `border-selected`, and no mid step exists between them, so the warm and green hues stay above 3:1 there. Contrast is against the hue's `bg`.
+
+| Hue | Light step | Light ratio | Dark step | Dark ratio |
+| --- | --- | --- | --- | --- |
+| red | 400 | 2.65 | 600 | 3.39 |
+| orange | 500 | 2.73 | 600 | 4.36 |
+| amber | 500 | 2.07 | 600 | 4.70 |
+| yellow | 600 | 2.83 | 600 | 4.97 |
+| lime | 600 | 2.96 | 600 | 4.78 |
+| green | 500 | 2.12 | 600 | 4.64 |
+| emerald | 500 | 2.34 | 600 | 4.13 |
+| teal | 500 | 2.33 | 600 | 3.96 |
+| cyan | 500 | 2.27 | 600 | 3.72 |
+| sky | 500 | 2.54 | 600 | 3.46 |
+| blue | 400 | 2.42 | 600 | 2.80 |
+| indigo | 400 | 2.79 | 600 | 2.49 |
+| violet | 400 | 2.60 | 600 | 2.60 |
+| purple | 400 | 2.60 | 600 | 2.72 |
+| fuchsia | 400 | 2.40 | 600 | 3.19 |
+| pink | 400 | 2.52 | 600 | 3.32 |
+| rose | 400 | 2.60 | 600 | 3.47 |
+| slate | 400 | 2.51 | 600 | 2.67 |
+| gray | 400 | 2.49 | 600 | 2.66 |
+| zinc | 400 | 2.52 | 600 | 2.57 |
+| neutral | 400 | 2.48 | 600 | 2.54 |
+| stone | 400 | 2.48 | 600 | 2.58 |
+| mauve | 400 | 2.48 | 600 | 2.46 |
+| olive | 400 | 2.25 | 600 | 2.83 |
+| mist | 400 | 2.35 | 600 | 2.67 |
+| taupe | 400 | 2.45 | 600 | 2.50 |
 
 Contrast is measured the way axe-core measures it: out-of-gamut colors are clipped to sRGB, nothing is rounded, and a pair passes only when its ratio is strictly greater than the threshold.
 

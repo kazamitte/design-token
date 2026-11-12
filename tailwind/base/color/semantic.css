@@ -97,7 +97,7 @@
   --c-orange-border-subtle: var(--color-orange-100);
   --c-orange-border-muted: var(--color-orange-200);
   --c-orange-border-selected: var(--color-orange-300);
-  --c-orange-border: var(--color-orange-400);
+  --c-orange-border: var(--color-orange-500);
   --c-orange-border-solid: var(--color-orange-700);
   --c-orange-fg-strong: var(--color-orange-900);
   --c-orange-fg: var(--color-orange-800);
@@ -114,7 +114,7 @@
   --c-amber-border-subtle: var(--color-amber-100);
   --c-amber-border-muted: var(--color-amber-200);
   --c-amber-border-selected: var(--color-amber-300);
-  --c-amber-border: var(--color-amber-400);
+  --c-amber-border: var(--color-amber-500);
   --c-amber-border-solid: var(--color-amber-700);
   --c-amber-fg-strong: var(--color-amber-900);
   --c-amber-fg: var(--color-amber-800);
@@ -131,7 +131,7 @@
   --c-yellow-border-subtle: var(--color-yellow-100);
   --c-yellow-border-muted: var(--color-yellow-200);
   --c-yellow-border-selected: var(--color-yellow-300);
-  --c-yellow-border: var(--color-yellow-400);
+  --c-yellow-border: var(--color-yellow-600);
   --c-yellow-border-solid: var(--color-yellow-700);
   --c-yellow-fg-strong: var(--color-yellow-900);
   --c-yellow-fg: var(--color-yellow-800);
@@ -148,7 +148,7 @@
   --c-lime-border-subtle: var(--color-lime-100);
   --c-lime-border-muted: var(--color-lime-200);
   --c-lime-border-selected: var(--color-lime-300);
-  --c-lime-border: var(--color-lime-400);
+  --c-lime-border: var(--color-lime-600);
   --c-lime-border-solid: var(--color-lime-700);
   --c-lime-fg-strong: var(--color-lime-900);
   --c-lime-fg: var(--color-lime-800);
@@ -165,7 +165,7 @@
   --c-green-border-subtle: var(--color-green-100);
   --c-green-border-muted: var(--color-green-200);
   --c-green-border-selected: var(--color-green-300);
-  --c-green-border: var(--color-green-400);
+  --c-green-border: var(--color-green-500);
   --c-green-border-solid: var(--color-green-700);
   --c-green-fg-strong: var(--color-green-900);
   --c-green-fg: var(--color-green-800);
@@ -182,7 +182,7 @@
   --c-emerald-border-subtle: var(--color-emerald-100);
   --c-emerald-border-muted: var(--color-emerald-200);
   --c-emerald-border-selected: var(--color-emerald-300);
-  --c-emerald-border: var(--color-emerald-400);
+  --c-emerald-border: var(--color-emerald-500);
   --c-emerald-border-solid: var(--color-emerald-700);
   --c-emerald-fg-strong: var(--color-emerald-900);
   --c-emerald-fg: var(--color-emerald-800);
@@ -199,7 +199,7 @@
   --c-teal-border-subtle: var(--color-teal-100);
   --c-teal-border-muted: var(--color-teal-200);
   --c-teal-border-selected: var(--color-teal-300);
-  --c-teal-border: var(--color-teal-400);
+  --c-teal-border: var(--color-teal-500);
   --c-teal-border-solid: var(--color-teal-700);
   --c-teal-fg-strong: var(--color-teal-900);
   --c-teal-fg: var(--color-teal-800);
@@ -216,7 +216,7 @@
   --c-cyan-border-subtle: var(--color-cyan-100);
   --c-cyan-border-muted: var(--color-cyan-200);
   --c-cyan-border-selected: var(--color-cyan-300);
-  --c-cyan-border: var(--color-cyan-400);
+  --c-cyan-border: var(--color-cyan-500);
   --c-cyan-border-solid: var(--color-cyan-700);
   --c-cyan-fg-strong: var(--color-cyan-900);
   --c-cyan-fg: var(--color-cyan-800);
@@ -233,7 +233,7 @@
   --c-sky-border-subtle: var(--color-sky-100);
   --c-sky-border-muted: var(--color-sky-200);
   --c-sky-border-selected: var(--color-sky-300);
-  --c-sky-border: var(--color-sky-400);
+  --c-sky-border: var(--color-sky-500);
   --c-sky-border-solid: var(--color-sky-700);
   --c-sky-fg-strong: var(--color-sky-900);
   --c-sky-fg: var(--color-sky-800);
